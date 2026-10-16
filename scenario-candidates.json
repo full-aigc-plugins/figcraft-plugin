@@ -1,0 +1,34 @@
+{
+  "status": "local-unreleased",
+  "sourcePackage": "full-aigc-skills/figcraft-skills",
+  "skills": [
+    {
+      "name": "figcraft-editor",
+      "sha256": "db3221080dd6ee217affdd70653368d38cfafdf9dca7c2213dfce7d760e6042c"
+    },
+    {
+      "name": "figcraft-wireframe",
+      "sha256": "319322e249a0f7cbc6cf88c263c5c592eb49e8ec2ac3deb5161aad343457a82a"
+    },
+    {
+      "name": "figcraft-responsive-layout",
+      "sha256": "df435aaad8e50acdf6d7a9632d18c28dac905306147d86585467a26d4392aa45"
+    },
+    {
+      "name": "figcraft-design-system",
+      "sha256": "8ad97fa03f4e5e33e301c1bbb9e0eb16b1943c0ded45dd7d4c8c35f60487f5de"
+    },
+    {
+      "name": "figcraft-prototype-flow",
+      "sha256": "d02f90b79a1165e38f6be5e757471141a9092193ed78059cb6cce3f241a4fe71"
+    },
+    {
+      "name": "figcraft-import-fig",
+      "sha256": "32862b83560e1ec1fba6e2b7ed55c557d484464618552578026c7cc3ddaa7000"
+    },
+    {
+      "name": "figcraft-dev-handoff",
+      "sha256": "a9ad68348839caa9a46116f5ec1f8b932c26de620439f2bad280a35a39d75c9d"
+    }
+  ]
+}
