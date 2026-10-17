@@ -35,3 +35,7 @@ python3 ui/build-source.py --output /new/build-dir --target-dir /existing/cargo-
 stdio 负责 Agent 与插件通信，本地 HTTP 负责页面和同会话编辑桥接。Agent 指令作用于当前页面的编辑器状态；等待 `editor_status` 就绪后再执行编辑。保存源工程后重开检查，关闭 MCP 进程前先保存。
 
 本轮优先验证标准插件入口、Codex 和 Claude Code 清单。仅支持 MCP 的工具不属于当前安装交付范围。
+
+### main 开发候选构建
+
+main 字体后备表改为定长数组，源码构建补丁已兼容旧行内列表与新数组，并同步增加数组长度；中文字体输入保持不变。此为构建兼容修复，不代表 main 已完成宿主验收。

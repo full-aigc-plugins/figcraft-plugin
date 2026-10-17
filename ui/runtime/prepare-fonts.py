@@ -37,7 +37,23 @@ elif name == 'deckcraft':
     replace('crates/fonts/build.rs', 'if wasm && !matches!', 'if wasm && *family != "LXGW WenKai" && !matches!')
 
 if name == 'figcraft':
-    replace('crates/text/src/fontdb.rs', '            \"Noto Sans\",\n', '            \"LXGW WenKai\",\n            \"Noto Sans\",\n')
+    path = root / 'crates/text/src/fontdb.rs'
+    source = path.read_text()
+    table = re.search(r'(const FALLBACK_FAMILIES: \[&str; )(\d+)(\] = \[\n)(.*?)(\n\];)', source, re.S)
+    if table:
+        # main将行内后备表提取为定长数组，新增字体也必须更新Rust数组长度。
+        body = table.group(4)
+        if len(re.findall(r'^\s*"[^"]+",?$', body, re.M)) != int(table.group(2)):
+            raise RuntimeError('figcraft: unexpected fallback array length')
+        anchor = '    "Noto Sans",'
+        if body.count(anchor) != 1 or '"LXGW WenKai"' in body:
+            raise RuntimeError('figcraft: unexpected fallback families')
+        body = body.replace(anchor, '    "LXGW WenKai",\n' + anchor)
+        replacement = table.group(1) + str(int(table.group(2)) + 1) + table.group(3) + body + table.group(5)
+        path.write_text(source[:table.start()] + replacement + source[table.end():])
+    else:
+        replace('crates/text/src/fontdb.rs', '            "Noto Sans",\n',
+                '            "LXGW WenKai",\n            "Noto Sans",\n')
 
 if name == 'cadcraft':
     replace('crates/ui-egui/src/theme.rs', 'let _ = ctx;', 'ctx.set_fonts(egui::FontDefinitions::default());')
