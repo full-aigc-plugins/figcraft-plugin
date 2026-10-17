@@ -8,27 +8,31 @@
     },
     {
       "name": "figcraft-wireframe",
-      "sha256": "319322e249a0f7cbc6cf88c263c5c592eb49e8ec2ac3deb5161aad343457a82a"
+      "sha256": "4c2bfa09c9ec00d877470c5d889a92ea9940d9c24b8bcb970ee03844c9658f01"
     },
     {
       "name": "figcraft-responsive-layout",
-      "sha256": "df435aaad8e50acdf6d7a9632d18c28dac905306147d86585467a26d4392aa45"
+      "sha256": "22d0548169f60764a9a48bf1fc1dbf20a1659a90011acc9d81ba7a4a396b73f7"
     },
     {
       "name": "figcraft-design-system",
-      "sha256": "8ad97fa03f4e5e33e301c1bbb9e0eb16b1943c0ded45dd7d4c8c35f60487f5de"
+      "sha256": "2dd1a0cec56c6225aa328b54a6a7b62d5b086ceae835d09be4d4b2682a2e5e6c"
     },
     {
       "name": "figcraft-prototype-flow",
-      "sha256": "d02f90b79a1165e38f6be5e757471141a9092193ed78059cb6cce3f241a4fe71"
+      "sha256": "d09a7eaec1a2653a3b3c164a9d301a2bbfb2481c2163307d3c287be522ec63c8"
     },
     {
       "name": "figcraft-import-fig",
-      "sha256": "32862b83560e1ec1fba6e2b7ed55c557d484464618552578026c7cc3ddaa7000"
+      "sha256": "0c15f40836fbea09329c51762b2e99f5c33ffce5b45d320be4a88490ad9d857b"
     },
     {
       "name": "figcraft-dev-handoff",
-      "sha256": "a9ad68348839caa9a46116f5ec1f8b932c26de620439f2bad280a35a39d75c9d"
+      "sha256": "61bd4e63868af8f5e3fdc5ee6979c4560827461ea3bb5511a507140c230e207e"
+    },
+    {
+      "name": "figcraft-scenario-playbooks",
+      "sha256": "0a3f526c4c38f606839c1e85ddc064af256a61d6301b36a55648ca6a646faf81"
     }
   ]
 }

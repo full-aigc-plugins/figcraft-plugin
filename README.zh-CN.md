@@ -28,3 +28,7 @@
 构建方法见 [ui/README.md](ui/README.md)；源码技能在独立 `figcraft-skills` 仓维护，本地副本由 `scenario-candidates.json` 校验。
 
 源码增强候选采用 `ui/source.lock.json` 与 `ui/build-source.py`；兼容更新查询本插件自有 GitHub Releases，失败回退内置，原版 Web 不替换增强自动化运行时。当前会话保留；宿主安装验收另行记录。
+
+## 界面场景操作手册
+
+新增8条界面设计流程，见 [figcraft-scenario-playbooks](skills/figcraft-scenario-playbooks/SKILL.md)。包含实际返回ID绑定、父子结构、自动布局和独立CLI执行脚本；宿主同步显示验收单独记录。

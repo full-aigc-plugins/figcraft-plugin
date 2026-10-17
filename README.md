@@ -1,6 +1,6 @@
 # FigCraft Use
 
-独立插件，包含官方图标、stdio MCP、MCP Apps 面板和 7 个界面设计场景技能。当前为本地未发布候选；没有修改全局插件设置。
+独立插件，包含官方图标、stdio MCP、MCP Apps 面板和界面设计场景技能，另附 8 条带参数的详细流程。当前为本地未发布候选；没有修改全局插件设置。
 
 编辑器基于 FigCraft v0.6.0 的固定源码加入自动化与工作区文件桥接，参考 Craft craft-runtime，保留其 Apache-2.0 许可。`ui/source.lock.json` 记录来源提交；`ui/editor.lock.json` 记录内置制品摘要。它是我们构建的增强版，不是官方原版 Web ZIP。
 
@@ -28,3 +28,7 @@
 构建方法见 [ui/README.md](ui/README.md)；源码技能在独立 `figcraft-skills` 仓维护，本地副本由 `scenario-candidates.json` 校验。
 
 源码增强候选采用 `ui/source.lock.json` 与 `ui/build-source.py`；兼容更新查询本插件自有 GitHub Releases，失败回退内置，原版 Web 不替换增强自动化运行时。当前会话保留；宿主安装验收另行记录。
+
+## 界面场景操作手册
+
+新增8条界面设计流程，见 [figcraft-scenario-playbooks](skills/figcraft-scenario-playbooks/SKILL.md)。包含实际返回ID绑定、父子结构、自动布局和独立CLI执行脚本；宿主同步显示验收单独记录。
