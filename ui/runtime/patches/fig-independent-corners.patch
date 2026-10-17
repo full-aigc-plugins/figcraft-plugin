@@ -17,7 +17,7 @@
 --- a/crates/format/src/fig/tests.rs
 +++ b/crates/format/src/fig/tests.rs
 @@ -920,3 +920,23 @@
-         crate::craft_fs::write(format!("{out}/{stem}.rest.json"), serde_json::to_string_pretty(&rest).unwrap()).unwrap();
+         std::fs::write(format!("{out}/{stem}.rest.json"), serde_json::to_string_pretty(&rest).unwrap()).unwrap();
      }
  }
 +
