@@ -1,0 +1,42 @@
+--- a/crates/format/src/fig/map.rs
++++ b/crates/format/src/fig/map.rs
+@@ -674,7 +674,12 @@
+         stroke(o, v);
+         copy_num(o, v, "cornerRadius", "cornerRadius");
+         copy_num(o, v, "cornerSmoothing", "cornerSmoothing");
+-        if v.flag("rectangleCornerRadiiIndependent") == Some(true) {
++        // 有的真实.fig省略独立圆角标志，但保留四个角值；显式false仍以统一半径为准。
++        let independent = v.flag("rectangleCornerRadiiIndependent").unwrap_or_else(|| {
++            ["rectangleTopLeftCornerRadius", "rectangleTopRightCornerRadius", "rectangleBottomRightCornerRadius", "rectangleBottomLeftCornerRadius"]
++                .iter().any(|key| v.num(key).is_some())
++        });
++        if independent {
+             let r = |k: &str| v.num(k).unwrap_or(0.0);
+             o.insert(
+                 "rectangleCornerRadii".into(),
+--- a/crates/format/src/fig/tests.rs
++++ b/crates/format/src/fig/tests.rs
+@@ -920,3 +920,23 @@
+         crate::craft_fs::write(format!("{out}/{stem}.rest.json"), serde_json::to_string_pretty(&rest).unwrap()).unwrap();
+     }
+ }
++
++
++#[test]
++fn imports_independent_corners_when_flag_is_absent() {
++    let mut sc = SCHEMA.to_string();
++    sc = sc.replace("float cornerRadius,", "float cornerRadius, bool rectangleCornerRadiiIndependent, float rectangleTopLeftCornerRadius, float rectangleTopRightCornerRadius, float rectangleBottomRightCornerRadius, float rectangleBottomLeftCornerRadius,");
++    let sc = Schema::parse(&sc).unwrap();
++    for flag in [None, Some(true), Some(false)] {
++        let mut props = vec![("size", xy(100.0, 100.0)), ("cornerRadius", f(12.0)),
++            ("rectangleTopLeftCornerRadius", f(4.0)), ("rectangleTopRightCornerRadius", f(8.0)),
++            ("rectangleBottomRightCornerRadius", f(12.0)), ("rectangleBottomLeftCornerRadius", f(16.0))];
++        if let Some(value) = flag { props.push(("rectangleCornerRadiiIndependent", Kv::Bool(value))); }
++        let msg = o(vec![("nodeChanges", arr(vec![node(1, None, "CANVAS", "Page", vec![]),
++            node(2, Some((1, "!")), "RECTANGLE", "Mixed", props)]))]);
++        let bytes = zip_file(&canvas(&sc, &msg));
++        let (doc, _) = import(&bytes, "corners").unwrap();
++        let want = if flag == Some(false) { [12.0; 4] } else { [4.0, 8.0, 12.0, 16.0] };
++        assert_eq!(named(&doc, "Mixed").corners.radii, want);
++    }
++}
