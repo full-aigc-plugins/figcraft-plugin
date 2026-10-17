@@ -2,7 +2,7 @@
 
 ## Installable editor development candidate
 
-`0.1.0-dev.20261017.2` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
+`0.1.0-dev.20261017.3` is distributed through the Full AIGC plugin marketplace as a development prerelease. Node.js 24 is required. Git installations use `ui/bootstrap.mjs` to download and verify the pinned editor archive on first start; complete release ZIPs also include that archive unpacked for offline startup. No Rust build or npm installation is required. Startup diagnostics use stderr; stdio remains MCP-only. The editor shares its session with Agent commands. Full creative quality and all-host embedded UI acceptance are still incomplete. Existing dated validation below describes its original version.
 
 
 ## Previous development candidate
@@ -53,3 +53,7 @@
 已通过隔离的Codex原生插件安装与app-server MCP路由，在Codex内置浏览器执行本仓prototype-flow步骤；实际点击Start→Result→Start。固定main d1d8c3f的Web候选可显示中文；同一会话node.set修改标题及按钮填色后，编辑器和proto.preview实时预览同时变化，原生工程保存成功。没有用独立SDK替代宿主调用。该结论仅覆盖一个合成原型，不是Kimi/ZCode、其他Fig场景或公开市场验收；默认旧内置Web未替换。
 
 真实二进制.fig样例按对象类型核对矢量顶点与画框圆角；原始CLI保留了本样例几何。曾把矢量通用圆角字段当作真实几何导致误报，现已修正检查器并撤回不必要的运行时补丁。该单一样例不代表所有Figma文件完整保真。
+
+### 候选启动修正
+
+本候选先完成轻量MCP握手及能力发现，在首次工具或资源调用时校验/获取固定编辑器资源。修复多个编辑器首次下载阻塞宿主握手的问题。Windows通过Git安装时须启用Git长路径支持（`git config --global core.longpaths true`）；完整ZIP不包含历史验收记录，可避免Git检出长路径的问题。运行资源沿用已核验的dev.20261017.2制品，不以入口版本号冒充上游升级。
