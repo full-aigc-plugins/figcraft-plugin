@@ -13,7 +13,7 @@ This plugin belongs to **AIGC content creation**.
 
 > Design, restructure and hand off an interface inside your agent host, with the editable FigCraft document and its tokens kept as the source of truth.
 
-[![Version](https://img.shields.io/badge/release-0.1.0--dev.20261018.3-1A73E8)](https://github.com/full-aigc-plugins/figcraft-plugin/releases)
+[![Version](https://img.shields.io/badge/release-0.1.0--dev.20261019.1-1A73E8)](https://github.com/full-aigc-plugins/figcraft-plugin/releases)
 [![Skills](https://img.shields.io/badge/skills-11-00A67E)](#skills)
 [![MCP tools](https://img.shields.io/badge/MCP%20tools-26-00A67E)](#mcp-tools)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
