@@ -13,7 +13,7 @@
 
 > 在智能体宿主里完成界面设计、结构重排与开发交接，可编辑的 FigCraft 文档和设计变量始终是事实源。
 
-[![版本](https://img.shields.io/badge/release-0.1.0--dev.20261018.3-1A73E8)](https://github.com/full-aigc-plugins/figcraft-plugin/releases)
+[![版本](https://img.shields.io/badge/release-0.1.0--dev.20261019.1-1A73E8)](https://github.com/full-aigc-plugins/figcraft-plugin/releases)
 [![技能](https://img.shields.io/badge/skills-11-00A67E)](#技能)
 [![MCP 工具](https://img.shields.io/badge/MCP%20tools-26-00A67E)](#mcp-工具)
 [![许可证](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)

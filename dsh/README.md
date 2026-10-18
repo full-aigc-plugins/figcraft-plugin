@@ -7,7 +7,7 @@ host manifest; Claude Code, Codex, ZCode and Kimi keep using those.
 ## Install
 
 ```sh
-dsh plugin --profile desktop add link:/Users/wandl/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/figcraft-plugin/dsh
+dsh plugin --profile desktop add link:/absolute/path/figcraft-plugin/dsh
 ```
 
 ## What DSH gets
