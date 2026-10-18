@@ -8,7 +8,7 @@
 
     - id: mcp-figcraft-figcraft-editor
       name: '@deepseek-ai/dsh-mcp-client'
-      disabled: !!js "!process.env.DSH_MCP_FIGCRAFT"
+      disabled: !!js "process.env.DSH_MCP_FIGCRAFT === '0'"
       config:
         serverName: "figcraft-editor"
         toolCallTimeoutMs: 60000
