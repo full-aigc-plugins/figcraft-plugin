@@ -1,7 +1,7 @@
 {
   "name": "figcraft",
   "version": "0.1.0-dev.20261019.1",
-  "description": "FigCraft 界面设计：内嵌编辑、同会话 MCP、工作区保存，以及主题变量、图标组件和数据图等场景技能；开发预发布。",
+  "description": "Wireframes, design systems, light/dark tokens, prototype flows and dev handoff. Layouts stay editable and responsive.",
   "author": {
     "name": "Full AIGC Plugins",
     "url": "https://github.com/full-aigc-plugins"
@@ -16,7 +16,10 @@
     "development-release"
   ],
   "skills": "./skills/",
-  "displayName": "FigCraft Use",
+  "displayName": "FigCraft · Design Mockups",
   "icon": "./assets/official-logo.png",
-  "mcpServers": "./.mcp.json"
+  "mcpServers": "./.mcp.json",
+  "displayName_i18n": {
+    "en": "FigCraft · Design Mockups"
+  }
 }
