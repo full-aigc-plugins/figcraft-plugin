@@ -10,8 +10,8 @@
       },
       "interface": {
         "logo": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/figcraft-plugin@v0.1.0-dev.20261018.3/assets/official-logo.png",
-        "displayName": "FigCraft · Design Mockups",
-        "shortDescription": "Wireframes, design systems, tokens and prototype handoff"
+        "displayName": "FigCraft（设计稿编辑）",
+        "shortDescription": "线框、设计系统、主题令牌与原型交付"
       },
       "version": "0.1.0-dev.20261019.1",
       "icon": "https://cdn.jsdelivr.net/gh/full-aigc-plugins/figcraft-plugin@v0.1.0-dev.20261019.1/assets/official-logo.png",
@@ -20,7 +20,7 @@
         "authentication": "ON_USE"
       },
       "category": "Creativity",
-      "description": "Wireframes, design systems, light/dark tokens, prototype flows and dev handoff. Layouts stay editable and responsive.",
+      "description": "线框、设计系统、明暗主题令牌、原型流与开发交接；布局保持可编辑与自适应。",
       "line": "full-aigc",
       "componentTypes": [
         "ui"
@@ -28,6 +28,6 @@
     }
   ],
   "interface": {
-    "displayName": "FigCraft · Design Mockups"
+    "displayName": "FigCraft（设计稿编辑）"
   }
 }

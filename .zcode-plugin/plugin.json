@@ -1,7 +1,7 @@
 {
   "name": "figcraft",
   "version": "0.1.0-dev.20261019.1",
-  "description": "Wireframes, design systems, light/dark tokens, prototype flows and dev handoff. Layouts stay editable and responsive.",
+  "description": "线框、设计系统、明暗主题令牌、原型流与开发交接；布局保持可编辑与自适应。",
   "author": {
     "name": "Full AIGC Plugins",
     "url": "https://github.com/full-aigc-plugins"
@@ -16,7 +16,7 @@
     "development-release"
   ],
   "skills": "./skills/",
-  "displayName": "FigCraft · Design Mockups",
+  "displayName": "FigCraft（设计稿编辑）",
   "icon": "./assets/official-logo.png",
   "mcpServers": {
     "figcraft-editor": {
@@ -33,15 +33,15 @@
     }
   },
   "displayName_i18n": {
-    "en": "FigCraft · Design Mockups"
+    "zh-CN": "FigCraft（设计稿编辑）"
   },
   "ui": {
     "surfaces": [
       {
         "id": "editor",
         "title": {
-          "en-US": "FigCraft · Design Mockups",
-          "zh-CN": "FigCraft · 设计稿编辑"
+          "en-US": "FigCraft (Design Mockups)",
+          "zh-CN": "FigCraft（设计稿编辑）"
         },
         "icon": "pencil",
         "server": "figcraft-editor",

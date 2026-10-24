@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "figcraft",
   "version": "0.1.0-dev.20261019.1",
-  "description": "Wireframes, design systems, light/dark tokens, prototype flows and dev handoff. Layouts stay editable and responsive.",
+  "description": "线框、设计系统、明暗主题令牌、原型流与开发交接；布局保持可编辑与自适应。",
   "author": {
     "name": "Full AIGC Plugins",
     "url": "https://github.com/full-aigc-plugins"
@@ -19,8 +19,8 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "FigCraft · Design Mockups",
-        "shortDescription": "Wireframes, design systems, tokens and prototype handoff",
+        "displayName": "FigCraft（设计稿编辑）",
+        "shortDescription": "线框、设计系统、主题令牌与原型交付",
         "longDescription": "Source-built FigCraft Web with same-session MCP editing and workspace file operations. Local development candidate; host acceptance remains separate.",
         "developerName": "Full AIGC Plugins",
         "category": "Creativity",
